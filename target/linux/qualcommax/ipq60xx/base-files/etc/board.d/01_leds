@@ -9,8 +9,8 @@ board=$(board_name)
 case "$board" in
 cmiot,ax18)
 	ucidef_set_led_netdev "wan" "WAN" "blue:wan" "wan" "tx rx link_10 link_100 link_1000"
-	ucidef_set_led_netdev "wlan2g" "WLAN2G" "blue:wlan-2ghz" "wlan1" "tx rx"
-	ucidef_set_led_netdev "wlan5g" "WLAN5G" "blue:wlan-5ghz" "wlan0" "tx rx"
+	ucidef_set_led_netdev "wlan2g" "WLAN2G" "blue:wlan-2ghz" "phy1-ap0" "tx rx"
+	ucidef_set_led_netdev "wlan5g" "WLAN5G" "blue:wlan-5ghz" "phy0-ap0" "tx rx"
 	;;
 linksys,mr7350)
 	ucidef_set_led_netdev "lan1-port-link" "LAN1-PORT-LINK" "90000.mdio-1:00:green:lan" "lan1" "link_10 link_100 link_1000"
