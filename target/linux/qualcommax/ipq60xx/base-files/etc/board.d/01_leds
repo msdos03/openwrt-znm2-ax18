@@ -48,6 +48,12 @@ netgear,wax610y)
 mikrotik,chateau-5g-r17-ax)
 	ucidef_set_led_netdev "eth" "ETH" "green:lan" "br-lan" "tx rx link"
 	;;
+zn,m2)
+	ucidef_set_led_netdev "wan" "WAN" "blue:wan" "wan" "tx rx link_10 link_100 link_1000"
+	ucidef_set_led_netdev "lan" "LAN" "blue:lan" "lan" "tx rx link_10 link_100 link_1000"
+	ucidef_set_led_netdev "wlan2g" "WLAN2G" "blue:wlan-2ghz" "phy1-ap0" "tx rx"
+	ucidef_set_led_netdev "wlan5g" "WLAN5G" "blue:wlan-5ghz" "phy0-ap0" "tx rx"
+	;;
 esac
 
 board_config_flush

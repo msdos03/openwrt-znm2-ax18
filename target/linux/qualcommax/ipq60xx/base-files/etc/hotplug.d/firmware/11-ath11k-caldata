@@ -141,6 +141,9 @@ case "$FIRMWARE" in
 		ath11k_set_macflag
 		ath11k_remove_regdomain
 		;;
+	zn,m2)
+		caldata_extract "0:art" 0x1000 0x10000
+		;;
 	esac
 	;;
 *)
